@@ -1,0 +1,414 @@
+@charset "UTF-8";
+
+/* 初期設定の補足 */
+html{
+    font-size: 100%; /*ブラウザの設定を反映*/
+}
+
+img{
+    max-width:100%; /*最大でも親要素と同じ大きさまで*/
+}
+
+a{
+    text-decoration: none; /*下線なし*/
+}
+
+ul,ol{
+    list-style: none; /*マークはなし*/
+}
+
+
+/*画面幅の設定*/
+/* 汎用クラス */
+.wrapper{
+    max-width:800px; /*大きくても800px*/
+    /*左右均等*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* header */
+.mainNav{
+    position: fixed; /*画面固定*/
+    z-index:100;
+    top:0;
+    width:100%;
+    height:80px;
+    background: #fff;
+}
+
+.mainNav ul{
+    height: 100%;
+    display: flex;
+    gap:20px;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 4%;
+}
+
+.mainNav a{
+    color:#555;
+    transition:color .4s;/*時間をかけて変化*/
+}
+
+.mainNav a:hover{
+    color:#f50;
+}
+
+.topView{
+    background: #0bd;
+    height:100vh;
+    position: relative;
+    z-index:1;
+}
+
+.logo{
+    position: absolute;
+    top:50%;
+    left:50%;
+    /* 自らを左に半身、上に半身ずらす */
+    transform:translate(-50%,-50%);
+    color:#fff; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo h1{
+    font-size: 3.8rem;
+}
+
+.logo p{
+    font-size: 1.4rem;
+}
+
+.icon{
+    width: 180px;
+    aspect-ratio: 1 / 1;  /* 縦横比 */
+    /* background: #aaa; */
+    margin: 20px 0;
+}
+
+.toWorksButton{
+    background: #fff;
+    color: #555;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 20px 25px;
+    border-radius: 10%;
+    transition:color .4s,background .4s;
+}
+
+.toWorksButton:hover{
+    background: #555;
+    color: #fff;
+}
+
+/* About */
+#about{
+    height: 100vh;
+    color:#555;
+}
+
+.about_inner{
+    position: relative;
+    height:100%;
+    text-align: center;
+}
+
+.about_inner div{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+.about_inner h2{
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+/* Works */
+#works{
+    padding: 180px 0;
+    background: #ccc;
+    color:#555;
+}
+
+.works_inner h2{
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.works_inner>p{
+    margin-bottom: 40px;
+}
+
+.worksGrid{
+    display: grid;
+    gap:80px 40px;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+}
+
+
+.gridItem{
+    text-align: center;
+    transition: opacity .8s;
+}
+
+.gridItem img{
+    box-shadow: 2px 2px 2px #333;/*影 X軸のずらし Y軸のずらし ぼやけ 色*/
+    /*height: 180px; 高さを揃えたい時*/
+}
+
+.gridItem a{
+    color: #555;
+}
+
+.gridItem:hover{
+    opacity:.8;
+}
+
+/* My skill set */
+#skillSet{
+    padding: 180px 0;
+    color:#555;
+}
+
+.skillSet_inner h2{
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.skillSet_inner p{
+    margin-bottom: 40px;
+}
+
+.skillFlex{
+    display: flex;
+    gap:40px;
+    margin-bottom: 80px;
+    flex-wrap: wrap; /*折り返す設定*/
+}
+
+.skillFlex li{
+    width: calc(50% - 40px);
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+}
+
+.skillFlex li span{
+    font-size: .9rem;
+    width:calc(35% - 10px);
+}
+
+.parentBar{
+    width: 65%;
+    background: #333;
+    height: 30px;
+}
+
+.childBar{
+    height: 100%;
+    background: #0bd;
+}
+
+.skillFlex li p{
+    width: 100%;
+    border: 1px solid #faa;
+    padding:10px;
+    font-size: .8rem;
+    color: #822;
+}
+
+.supplement{
+    font-size: .9rem;
+}
+
+/* Profile */
+#profile{
+    padding: 180px 0;
+    color:#555;
+    background:#eee;
+}
+
+.profile_inner h2{
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+
+.profile_inner>p{
+    margin-bottom: 20px;
+}
+
+.toSNS{
+    list-style:disc inside;
+    width:180px;
+    margin-left: auto;
+    margin-bottom: 100px;
+}
+
+.profile_inner h3{
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #555;
+    padding: 10px;
+    color: #822;
+}
+
+.jobHistory li{
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.jobTitle{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.jobDate{
+    font-size: .9rem;
+    color: #822;
+    margin-left: 20px;
+
+}
+
+.jobInfo{
+    background: #fff;
+    padding: 10px 20px;
+}
+
+/* Contact */
+#contact{
+    height: 100vh;
+    color:#555;
+}
+
+.contact_inner{
+    position: relative;
+    height:100%;
+    text-align: center;
+}
+
+.contact_inner>div{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+.contact_inner h2{
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+/* .contact_inner a{
+    display: block;
+    margin-top: 20px;
+    padding:20px 40px;
+    background: #0bd;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #05a;
+} */
+
+#footer{
+    height: 400px;
+    background: #09b;
+    color:#555;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:#fff;
+}
+
+.footerTop p{
+    font-size: 2.4rem;
+}
+
+.footerBottom p{
+    font-size: .8rem;
+}
+
+
+/* レスポンシブCSS */
+@media screen and (max-width:600px){
+    /* .wrapper{
+
+    } */
+
+    .mainNav ul{
+        justify-content: center;
+        margin-right: 0;
+    }
+
+    .about_inner>div,.contact_inner>div{
+        width:80%;
+    }
+
+    .works_inner,.skillSet_inner,.profile_inner,#footer{
+        padding:0 4%;
+    }
+
+    .skillFlex{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skillFlex li{
+        width: 80%;
+    }
+}
+
+/* workページ */
+#works-main h1{
+    font-size: 2.8rem;
+    border-bottom: 10px #05f solid;
+    margin: 80px 0;
+}
+
+.work-overview{
+    padding:10px;
+    margin-bottom: 80px;
+}
+
+.work-overview a{
+    text-decoration: underline;
+}
+
+.work-overview p{
+    border: 1px #888 solid;
+    padding:10px 15px;
+}
+
+.work-detail{
+    width: 90%;
+    margin:0 auto;
+    margin-bottom: 40px;
+}
+
+.work-detail p{
+    padding:5px 10px;
+}
+
+
+/* レスポンシブCSS */
+@media screen and (max-width:600px){
+     #works-main{
+        width:95%;
+        margin: 0 auto;
+    }
+
+    #works-main h1{
+        font-size: 1.6rem;
+    }
+}

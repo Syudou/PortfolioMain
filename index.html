@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首藤守のポートフォリオサイト</title>
+
+    <!-- reset CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <!-- My css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header id="header">
+        <nav class="mainNav">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#skillSet">Skill set</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="topView">
+            <div class="logo">
+                <h1>首藤 守の遍歴</h1>
+                <p>できるスキルのポートフォリオサイト</p>
+                <div class="icon"><img src="images/Image20241008104603.png" alt="ノートパソコンの絵（仮）"></div>
+                <a href="#works" class="toWorksButton">Works</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about">
+            <div class="wrapper about_inner">
+                <div>
+                    <h2>About this site</h2>
+                    <p>
+                        このサイトは首藤 守のポートフォリオサイトでエンジニアスキルの一部を披露します。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="works">
+            <div class="wrapper works_inner">
+                <h2>Works</h2>
+                <p>
+                    私の実際に作成した作品や学習内容を紹介します。<br>
+                    Unityで作ったゲーム作品やWebサイトを掲載しています。
+                </p>
+
+                <div class="worksGrid">
+                    <div class="gridItem">
+                        <div class="gridBox" href="work1.html" target="_blank">
+                            <img src="images/Sidegame_sample.PNG" alt="my works">
+                            <p>Unityで作成した横スクロールゲーム。タイムカウントやスコア計算を頑張って作りました。
+                                <!-- <a href="https://github.com/Syudou/SideGame" target="_blank">プログラムはこちら</a> -->
+                            </p>
+                            
+                        </div>
+                    </div>
+                    <div class="gridItem">
+                        <a class="gridBox" href="">
+                            <img src="images/sample.jpg" alt="my works">
+                            <p>message</p>
+                        </a>
+                    </div>
+                    <div class="gridItem">
+                        <a class="gridBox" href="">
+                            <img src="images/sample.jpg" alt="my works">
+                            <p>message</p>
+                        </a>
+                    </div>
+                    <div class="gridItem">
+                        <a class="gridBox" href="">
+                            <img src="images/sample.jpg" alt="my works">
+                            <p>message</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skillSet">
+            <div class="wrapper skillSet_inner">
+                <h2>My skill set</h2>
+                <p>
+                    訓練学校にて学んだスキルを活かし、ゲームエンジンのUnityやC＃、こちらのポートフォリオ作成に使用した言語を習得しています。
+                </p>
+                <ul class="skillFlex">
+                    <li>
+                        <span>HTML/CSS</span>
+                        <!-- <div class="parentBar">
+                            <div class="childBar" style="width:80%;"></div>
+                        </div> -->
+                        <p>(70％)HTML/CSSの基礎、レスポンシブデザインをはじめ、flexやgridの技術を習得しました。positionによる重ね合わせの技術も習得、疑似クラスの一部も学習しています。
+                        </p>
+                    </li>
+                    <li>
+                        <span>C#</span>
+                        <!-- <div class="parentBar">
+                            <div class="childBar" style="width:80%;"></div>
+                        </div> -->
+                        <p>(80%)オブジェクト指向の基礎を用いたクラス設計、継承などの習得をしました。コンソールアプリでいくつかのアプリを実際に作成しています。</p>
+                    </li>
+                    <li>
+                        <span>Unity</span>
+                        <!-- <div class="parentBar">
+                            <div class="childBar" style="width:90%;"></div>
+                        </div> -->
+                        <p>(80%)2D・3Dゲームの作成、コルーチンの習得、プレハブを利用した効率的な制作を行ってきました。いくつかのオリジナル作品を通して様々なデバッグにも強くなりました。</p>
+                    </li>
+                    <li>
+                        <span>Premiere Pro</span>
+                        <!-- <div class="parentBar">
+                            <div class="childBar" style="width:90%;"></div>
+                        </div> -->
+                        <p>(90%)カット、字幕や音楽の挿入といった基礎を習得をしました。</p>
+                    </li>
+                </ul>
+                <p class="supplement">
+                    Unityで作成した作品の中で、使用するモデリングも自分で自作できるようにBlenderも独学で学んでいます。
+                </p>
+            </div>
+        </section>
+
+        <section id="profile">
+            <div class="wrapper profile_inner">
+                <h2>Profile(About me)</h2>
+                <p>
+                    バグチェック作業を経て、主にUnity（C#）を使用したゲーム制作を行っております。
+                </p>
+                <!-- <ul class="toSNS">
+                     <li><a href="">x</a></li>
+                    <li><a href="">instagram</a></li>
+                    <li><a href="">tiktok</a></li> 
+                </ul> -->
+                <h3>My Job History</h3>
+                <ul class="jobHistory">
+                    <li>
+                        <div class="jobTitle">日本マニュファクチュアリングサービス<span class="jobDate">2020～2020</span>
+                        </div>
+                        <p class="jobInfo">
+                            技術職として、電源コードの作成や電源の安全確認作業を行っておりました。
+                        </p>
+                    </li>
+                    <li>
+                        <div class="jobTitle">株式会社トライズリンクス<span class="jobDate">2024～2024</span>
+                        </div>
+                        <p class="jobInfo">
+                            研修として、営業の声掛けをしつつadobe製品を使用した動画制作をしていました。字幕、カット作業、BGMの挿入、音量調整等ができるようになりました。
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="wrapper contact_inner">
+                <div>
+                    <h2>Contact</h2>
+                    <ul>
+                        <!-- <li>Tell:</li> -->
+                        <li>email: f16g3174@gmail.com</li>
+                    </ul>
+                    <!-- <a href="" class="sendMail">
+                        Send Mail
+                    </a> -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer">
+        <div>
+            <div class="footerTop">
+                <p>Thank you for coming!</p>
+            </div>
+            <div class="footerBottom">
+                <p class="copyright">&copy;your portfolio name (since)</p>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>

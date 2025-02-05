@@ -1,0 +1,197 @@
+@charset "UTF-8";
+
+html {
+    /* ブラウザの設定を活かす */
+    /* ブラウザの標準 16px → 1rem */
+    font-size: 100%;
+}
+
+body {
+    color: #383e45;
+    /* 1remはhtmlの100%(16px) */
+    font-size: 0.9rem;
+}
+
+a {
+    /* 下線をなくす */
+    text-decoration: none;
+}
+
+img {
+    /* どんなに写真の寸法が大きいファイルでも最大の幅は親要素の幅まで */
+    max-width: 100%;
+}
+
+li {
+    /* 黒丸などのマーカーをなし */
+    list-style: none;
+}
+
+.site-title {
+    width: 120px;
+    /* 行間 */
+    line-height: 1px;
+    /* padding 上下　左右 */
+    padding: 10px 0;
+}
+
+/* .site-titleの中のa */
+.site-title a {
+    display: block;
+}
+
+.section-title {
+    display: inline-block;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 60px;
+    border-bottom: solid 1px #383e45;
+}
+
+.content-title {
+    font-size: 1rem;
+/* margin 上下　左右 */
+    margin: 10px 0;
+}
+
+/* コンテンツの幅を絞るときによく使われるクラス名 */
+.wrapper {
+    /* 広がっても、そのコンテンツは960pxまで */
+    max-width: 960px;
+    margin: 0 auto 100px auto;
+    padding: 0 4%;
+    text-align: center;
+}
+
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+#header {
+    /* 直属の子要素をとにかく横並びに強制 */
+    display: flex;
+    /* flexの進行方向の並び */
+    justify-content: space-between;
+    /* flexの進行方向とは垂直方向の並び */
+    align-items: center;
+    margin: 0 auto;
+}
+
+#header ul {
+    display: flex;
+    padding-left: 30px;
+}
+
+#header li {
+    margin-left: 30px;
+}
+
+#header li a {
+    color: #242492;
+}
+
+/* 「:hover」をつけると、「マウスオーバーした時」のデザインという意味になる */
+#header li a:hover {
+    /* 透明度0が透明、1が不透明 */
+    opacity: .7;
+}
+
+/*-------------------------------------------
+Mainvisual
+-------------------------------------------*/
+#mainvisual {
+    margin-bottom: 80px;
+}
+
+#mainvisual img {
+    width: 100%;
+    max-width: 1920px;
+    height: 600px;
+    object-fit: cover;
+}
+
+/*-------------------------------------------
+About
+-------------------------------------------*/
+#about .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about img {
+    width: 100px;
+    height: 100px;
+    /* 枠の4つの角を丸める命令 */
+    /* 50%にすると正方形をまん丸 */
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+#about .text {
+    text-align: left;
+}
+
+/*-------------------------------------------
+Bicycle
+-------------------------------------------*/
+#bicycle ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#bicycle li {
+    width: 32%;
+}
+
+/*-------------------------------------------
+  footer
+  -------------------------------------------*/
+#footer {
+    font-size: 0.5rem;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/*-------------------------------------------
+  SP
+  -------------------------------------------*/
+  /* メディアクエリ → レスポンシブデザインを始める条件 */
+  /* ()内の中に発動条件 */
+  /* 大きくても600pxまでの画面の時 → 0~600pxの時 */
+@media screen and (max-width: 600px) {
+
+    /*-------------------------------------------
+    Mainvisual
+    -------------------------------------------*/
+    #mainvisual img {
+        /* vhはウィンドウの高さの単位 */
+        /* 100vhはウィンドウの高さ100% */
+        /* ※100vqはウィンドウの幅 */
+        /* calc()は()の中での計算式をOKにする値 */
+        height: calc(100vh - 60px);
+    }
+
+    /*-------------------------------------------
+    About
+    -------------------------------------------*/
+    #about .content {
+        flex-direction: column;
+    }
+
+    #about img {
+        margin-right: 0;
+    }
+
+    /*-------------------------------------------
+    Bicycle
+    -------------------------------------------*/
+    #bicycle ul {
+        /* 並び方を縦にする */
+        flex-direction: column;
+    }
+
+    #bicycle li {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
