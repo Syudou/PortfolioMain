@@ -412,3 +412,8 @@ ul,ol{
         font-size: 1.6rem;
     }
 }
+
+.experience-link {
+    color: blue !important;  /* 文字色を強制的に青にする */
+    text-decoration: underline !important;  /* 下線を強制的につける */
+}
